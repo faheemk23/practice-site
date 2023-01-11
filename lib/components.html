@@ -7,7 +7,7 @@
     <meta name="keywords" content="faheem">
     <meta name="author" content="faheem khan">
     <title>component library</title>
-    <link href="styles.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
 </head>
 <body>
     <h1>component library</h1>
@@ -24,17 +24,17 @@
     <h2>@containers</h2>
 
     <h3>@fluid container</h3>
-    <div>This is going to be a fluid container.</div>
+    <div class="container">This is going to be a fluid container. It will go full width of page. With some margin.</div>
 
     <h3>@center container</h3>
-    <div>This is going to be a center container. It will go till a given width and center content </div>
+    <div class="container container-center">This is going to be a center container. It will go till a given width and center content </div>
 
     <hr>
 
     <h2>@links</h2>
 
-    <a href="/">Primary Link</a>
-    <a href="/">Secondary Link</a>
+    <a class="link link-primary" href="/">Primary Link</a>
+    <a class="link link-secondary" href="/">Secondary Link</a>
 
     <hr>
 
@@ -42,7 +42,7 @@
 
     <h3>@unordered lists</h3>
     <p>We don't want to show bullets in the unordered list. We'll remove that in CSS.</p>
-    <ul>
+    <ul class="list">
         <li>item one</li>
         <li>item two</li>
         <li>item three</li>
@@ -50,14 +50,14 @@
 
     <h3>@inline lists</h3>
     <p>Instead of going in a new row, we will create a list which will take columns.</p>
-    <ul>
-        <li>item one</li>
-        <li>item two</li>
-        <li>item three</li>
+    <ul class="list">
+        <li class="list-item-inline">item one</li class="list-item-inline">
+        <li class="list-item-inline">item two</li class="list-item-inline">
+        <li class="list-item-inline">item three</li>
     </ul>
 
     <h3>@reverse ordered lists</h3>
-    <p>Countingh will go reverse for this list.</p>
+    <p>Counting will go reverse for this list.</p>
     <ol reversed>
         <li>something</li>
         <li>something else</li>
@@ -67,19 +67,23 @@
     <hr>
 
     <h2>@nav</h2>
+    <p>Navigation is used on the top of the page and used to get to different pages</p>
 
-    <nav>
-        <div>theBrandName</div>
-        <a href="/">home</a>
-        <a href="/">producs</a>
-        <a href="/">about</a>
+    <nav class="navigation">
+        <div class="navigation-brand">theBrandName</div>
+        <ul class="list">
+            <li class="list-item-inline"><a class="link nav-pills link-active" href="/">home</a></li>
+            <li class="list-item-inline"><a class="link nav-pills" href="/">producs</a></li>
+            <li class="list-item-inline"><a class="link nav-pills" href="/">about</a></li>
+        </ul>
+        
     </nav>
 
     <h2>@header</h2>
 
     <header>
-        <img src="images/hero.svg" height="300"/>
-        <h1>this is heading h1 inside header</h1>
+        <img class="hero-image" src="images/hero.svg" height="230" width="350"/>
+        <h1 class="hero-heading">this is heading h1 inside header</h1>
     </header>
 
     <hr>
@@ -91,20 +95,20 @@
     <h3>@normal section</h3>
 
     <section>
-        <div>
-            <h2>heading inside section</h2>
+        <div class="section">
+            <h2 class="section-heading">heading inside section</h2>
             <p>Text defining this section and many more things</p>
-            <a href="/">Primary Button</a>
+            <a class="link link-primary" href="/">Primary Button</a>
         </div>
     </section>
 
     <h2>@an off white section</h2>
 
     <section>
-        <div>
-            <h2>inside off white section</h2>
+        <div class="section ow">
+            <h2 class="section-heading">heading inside off white section</h2>
             <p>Text defining this section and many more things</p>
-            <a href="/">Primary Button</a>
+            <a class="link link-primary" href="/">Primary Button</a>
         </div>
     </section>
 
@@ -112,12 +116,12 @@
 
     <h2>@footer</h2>
 
-    <footer>
-        <div>header inside footer</div>
-        <ul>
-            <li><a href="/">socialone</a></li>
-            <li><a href="/">socialtwo</a></li>
-            <li><a href="/">socialthree</a></li>
+    <footer class="footer">
+        <div class="footer-header">header inside footer</div>
+        <ul class="list ">
+            <li class="list-item-inline"><a class="link social-link" href="/">socialone</a></li>
+            <li class="list-item-inline"><a class="link social-link" href="/">socialtwo</a></li>
+            <li class="list-item-inline"><a class="link social-link" href="/">socialthree</a></li>
         </ul>
     </footer>
 
